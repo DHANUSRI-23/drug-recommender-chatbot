@@ -50,22 +50,7 @@ If you're experiencing a real medical emergency or condition, **consult a certif
 - **Email:** [dhanusrivenu2005@gmail.com](mailto:dhanusrivenu2005@gmail.com)  
 - **GitHub:** [DHANUSRI-23](https://github.com/DHANUSRI-23)
 
----
 
-## 📌 How to Run Locally
-
-1. Clone the repository  
-   `git clone https://github.com/DHANUSRI-23/drug-recommender-chatbot.git`
-
-2. Navigate to the folder  
-   `cd drug-recommender-chatbot`
-
-3. Install dependencies  
-   `pip install -r requirements.txt`
-
-4. Add your Gemini API key in a `.env` file like this:
-   ```env
-   GOOGLE_API_KEY=your_key_here
 
 
 
