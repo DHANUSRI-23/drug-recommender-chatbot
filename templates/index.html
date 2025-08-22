@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Health Assistant 💊</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="main-container">
+        <h2>💊 Drug Recommendation System</h2>
+
+        <form method="POST">
+            <label>Symptom / Condition:</label>
+            <input type="text" name="symptom" placeholder="e.g. headache, diabetes">
+
+            <label>Age:</label>
+            <input type="number" name="age" placeholder="e.g. 25">
+
+            <label>Gender:</label>
+            <select name="gender">
+                <option>-- Select Gender --</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Severity:</label>
+            <select name="severity">
+                <option>-- Select Severity --</option>
+                <option>Mild</option>
+                <option>Moderate</option>
+                <option>Severe</option>
+            </select>
+
+            <button type="submit" class="btn-green">Recommend</button>
+        </form>
+
+        {% if recommendation %}
+            <div class="result">
+                <strong>Recommended Drug:</strong> {{ recommendation }} <br>
+                <a href="https://www.google.com/maps/search/{{ recommendation }}+pharmacy+near+me" target="_blank">
+                    📍 Find Nearby Pharmacies
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Chat Assistant -->
+    <div class="chatbot">
+        <h3>🤖 Ask AI Assistant</h3>
+        <form method="POST">
+            <textarea name="question" rows="3" placeholder="e.g. Can I take ibuprofen with paracetamol?"></textarea>
+            <button type="submit" class="btn-blue">Ask</button>
+        </form>
+
+        {% if chat_history %}
+            <div class="chat-history">
+                <h4>Chat History:</h4>
+                {% for q, a in chat_history %}
+                    <div class="chat-bubble user"><strong>You:</strong> {{ q }}</div>
+                    <div class="chat-bubble ai"><strong>AI:</strong> {{ a }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
