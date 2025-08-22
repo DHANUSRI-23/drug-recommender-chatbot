@@ -3,6 +3,8 @@ from flask_session import Session
 import pandas as pd
 import pickle
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
 # Initialize app
 app = Flask(__name__)
@@ -10,8 +12,11 @@ app.secret_key = 'your_secret_key'
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
-# Configure Gemini API
-genai.configure(api_key="AIzaSyD-qTyix3U7C267Pd4RnJvmvwWEXMmqXic")  # Replace with your actual key
+
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
 
 # Load model and vectorizer
 with open("model.pkl", "rb") as f:
