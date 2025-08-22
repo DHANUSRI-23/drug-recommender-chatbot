@@ -14,3 +14,9 @@ __pycache__/
 # Ignore IDE/editor settings
 .vscode/
 .idea/
+
+.env
+venv/
+__pycache__/
+*.pkl
+*.csv
