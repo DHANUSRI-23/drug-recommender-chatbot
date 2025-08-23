@@ -26,7 +26,8 @@ with open("vectorizer.pkl", "rb") as f:
     vectorizer = pickle.load(f)
 
 # Load dataset (if needed for future enhancements)
-df = pd.read_csv(r"C:\Users\dhanu\Desktop\test\Copy of drugsComTrain_raw - drugsComTrain_raw.csv")
+df = pd.read_csv("Copy of drugsComTrain_raw - drugsComTrain_raw.csv")
+
 df.dropna(subset=["drugName"], inplace=True)
 
 @app.route("/", methods=["GET", "POST"])
