@@ -30,7 +30,7 @@ A mini-project built using Flask that:
 
 🌐 **Live Demo**
 
-Access the project here 👉 [Drug Recommender Chatbot](https://791ff2df9930.ngrok-free.app)
+Access the project here 👉 [Drug Recommender Chatbot](drug-recommender-chatbot-production.up.railway.app)
 
 
 
