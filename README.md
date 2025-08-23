@@ -28,9 +28,10 @@ A mini-project built using Flask that:
 ---
 
 
-## 🚀 Live Demo
+🌐 **Live Demo**
 
-👉 **[Try it here](https://drug-recommender-chatbot.onrender.com)**
+Access the project here 👉 [Drug Recommender Chatbot](https://791ff2df9930.ngrok-free.app)
+
 
 
 ---
